@@ -2,10 +2,141 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Personal Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Elijah Robinson is a web development student at the University of Louisiana at Lafayette.">
+  <title>Elijah Robinson | Web Development Student</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Add your HTML content here -->
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- The header contains the site name and links to each section. -->
+  <header class="site-header">
+    <a class="wordmark" href="#home">Elijah Robinson<span>.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- The forest image gives the introduction a natural background. -->
+    <section class="hero" id="home">
+      <img class="hero-image" src="img/greenery.jpg" alt="Green forest canopy">
+      <div class="hero-content">
+        <p class="eyebrow">WEB DEVELOPMENT STUDENT · LAFAYETTE, LOUISIANA</p>
+        <h1>Hi, I’m Elijah.<br>I’m learning to build for the web.</h1>
+        <p class="hero-copy">I’m a student, curious problem-solver, and future front-end developer. This is where I share what I’m learning and making.</p>
+        <a class="button button-light" href="#projects">Explore my projects <span aria-hidden="true">↓</span></a>
+      </div>
+      <p class="hero-note">Growing one project at a time.</p>
+    </section>
+
+    <!-- The portrait and biography introduce the person behind the work. -->
+    <section class="about section-wrap" id="about">
+      <div class="about-photo">
+        <img src="img/monstrance.jpg" alt="A gold Catholic monstrance displaying the Eucharist">
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow eyebrow-green">A LITTLE ABOUT ME</p>
+        <h2>Curious by nature.<br>Creative by practice.</h2>
+        <p>I’m studying at the University of Louisiana at Lafayette, where I’m building a strong foundation in web development. I enjoy learning how thoughtful design and simple, well-written code can make the web easier to use.</p>
+        <p>This portfolio will grow along with me. I’m excited to keep experimenting, learn from each project, and turn new ideas into something people can explore.</p>
+        <a class="text-link" href="#contact">Let’s connect <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <!-- Add or remove skill items as you learn new tools. -->
+    <section class="skills section-wrap" id="skills">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow eyebrow-green">TOOLS IN MY TOOLKIT</p>
+          <h2>Skills I’m growing</h2>
+        </div>
+        <p>Learning the fundamentals, then putting them to work one step at a time.</p>
+      </div>
+      <ul class="skill-list">
+        <li><span>01</span> HTML</li>
+        <li><span>02</span> CSS</li>
+        <li><span>03</span> JavaScript</li>
+        <li><span>04</span> Responsive design</li>
+        <li><span>05</span> Git &amp; GitHub</li>
+        <li><span>06</span> VS Code</li>
+      </ul>
+    </section>
+
+    <!-- Replace the sample titles, photos, descriptions, and # links with your work. -->
+    <section class="projects" id="projects">
+      <div class="section-wrap">
+        <div class="section-heading project-heading">
+          <div>
+            <p class="eyebrow eyebrow-green">A WORK IN PROGRESS</p>
+            <h2>Projects &amp; practice</h2>
+          </div>
+          <p>Small ideas, new skills, and the progress in between.</p>
+        </div>
+
+        <div class="project-list">
+          <article class="project-card">
+            <img src="img/project-portfolio.jpg" alt="Students working together around a laptop">
+            <div class="project-info">
+              <p class="project-status">IN PROGRESS · HTML &amp; CSS</p>
+              <h3>Personal portfolio</h3>
+              <p>A home for my work, the things I’m learning, and what I make next.</p>
+              <!-- Change # to the URL of your finished project. -->
+              <a class="text-link" href="#projects">View project <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="img/project-cafe.jpg" alt="A welcoming neighborhood cafe interior">
+            <div class="project-info">
+              <p class="project-status">COMING SOON · RESPONSIVE DESIGN</p>
+              <h3>Campus café concept</h3>
+              <p>A friendly landing page concept for a neighborhood spot near campus.</p>
+              <!-- Change # to the URL of your finished project. -->
+              <a class="text-link" href="#projects">View project <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="img/project-garden.jpg" alt="A green landscape in the early morning light">
+            <div class="project-info">
+              <p class="project-status">COMING SOON · JAVASCRIPT</p>
+              <h3>Garden journal</h3>
+              <p>A little interactive space to keep notes on plants and new growth.</p>
+              <!-- Change # to the URL of your finished project. -->
+              <a class="text-link" href="#projects">View project <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Email and phone links let visitors contact you directly. -->
+    <section class="contact section-wrap" id="contact">
+      <div>
+        <p class="eyebrow eyebrow-green">SAY HELLO</p>
+        <h2>Have an idea or want to connect?</h2>
+        <p>I’d love to hear from you. Send me an email or give me a call.</p>
+      </div>
+      <div class="contact-links">
+        <a class="contact-email" href="mailto:elijah.robinson1@louisiana.edu">elijah.robinson1@louisiana.edu</a>
+        <a class="contact-phone" href="tel:+13187916347">(318)-791-6347</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- The footer repeats the key links and copyright information. -->
+  <footer class="site-footer">
+    <p>© 2026 Elijah Robinson. Made with care.</p>
+    <div>
+      <a href="tel:+13187916347">Call Elijah</a>
+      <a href="#home">Back to top ↑</a>
+    </div>
+    <p class="image-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Eucharistic_Adoration_-_Monstrance.jpg">PerfectUnityOrg / Wikimedia Commons</a>, licensed <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.</p>
+  </footer>
 </body>
 </html>

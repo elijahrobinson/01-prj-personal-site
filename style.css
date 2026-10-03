@@ -1,1 +1,510 @@
-/* Add you CSS here */
+/* These colors are shared across the whole page. */
+:root {
+	--ink: #202720;
+	--muted: #626b62;
+	--sage: #dfe8dc;
+	--sage-dark: #526b53;
+	--paper: #fbfcf9;
+	--white: #ffffff;
+	--line: #e5e9e2;
+}
+
+/* A few simple defaults keep spacing and image sizes predictable. */
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	background: var(--paper);
+	color: var(--ink);
+	font-family: "Trebuchet MS", Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.7;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+a {
+	color: inherit;
+}
+
+a:focus-visible {
+	outline: 3px solid #8aa486;
+	outline-offset: 4px;
+}
+
+.skip-link {
+	position: absolute;
+	top: -60px;
+	left: 16px;
+	z-index: 2;
+	padding: 8px 12px;
+	background: var(--white);
+	color: var(--ink);
+}
+
+.skip-link:focus {
+	top: 12px;
+}
+
+/* The header stays simple so the section links are easy to find. */
+.site-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 24px;
+	padding: 18px max(6%, calc((100% - 1120px) / 2));
+	background: var(--paper);
+}
+
+.wordmark {
+	color: var(--ink);
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 21px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.wordmark span {
+	color: var(--sage-dark);
+}
+
+.site-header nav,
+.site-footer div {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 26px;
+}
+
+.site-header nav a,
+.site-footer a {
+	color: var(--muted);
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.site-header nav a:hover,
+.site-footer a:hover {
+	color: var(--sage-dark);
+}
+
+/* A dark overlay keeps the hero text readable over the forest photo. */
+.hero {
+	position: relative;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	min-height: 540px;
+	padding: 76px max(8%, calc((100% - 1080px) / 2));
+	color: var(--white);
+}
+
+.hero::before {
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(90deg, rgba(19, 25, 22, 0.82), rgba(19, 25, 22, 0.24));
+	content: "";
+}
+
+.hero-image {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center 50%;
+}
+
+.hero-content {
+	position: relative;
+	z-index: 1;
+	max-width: 660px;
+}
+
+.eyebrow {
+	margin: 0 0 16px;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.hero .eyebrow {
+	color: #e2eadf;
+}
+
+h1,
+h2,
+h3,
+p {
+	margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+	font-family: Georgia, "Times New Roman", serif;
+	font-weight: normal;
+	line-height: 1.2;
+}
+
+.hero h1 {
+	max-width: 650px;
+	margin-bottom: 20px;
+	font-size: 52px;
+}
+
+.hero-copy {
+	max-width: 510px;
+	margin-bottom: 28px;
+	color: #edf1eb;
+}
+
+.button {
+	display: inline-block;
+	padding: 11px 18px;
+	border: 1px solid var(--white);
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.button-light {
+	background: var(--white);
+	color: var(--ink);
+}
+
+.button-light:hover {
+	background: var(--sage);
+}
+
+.hero-note {
+	position: absolute;
+	z-index: 1;
+	right: 6%;
+	bottom: 12px;
+	color: #e2eadf;
+	font-size: 12px;
+}
+
+/* Shared width and spacing keep each section aligned. */
+.section-wrap {
+	max-width: 1120px;
+	margin: 0 auto;
+	padding: 88px 32px;
+}
+
+.eyebrow-green {
+	color: var(--sage-dark);
+}
+
+.about {
+	display: flex;
+	align-items: center;
+	gap: 72px;
+}
+
+.about-photo {
+	flex: 0 1 380px;
+}
+
+.about-photo img {
+	width: 100%;
+	height: 410px;
+	object-fit: cover;
+}
+
+.about-copy {
+	flex: 1 1 430px;
+}
+
+.about-copy h2,
+.section-heading h2,
+.contact h2 {
+	margin-bottom: 18px;
+	font-size: 36px;
+}
+
+.about-copy > p:not(.eyebrow),
+.section-heading > p,
+.contact > div > p:not(.eyebrow) {
+	color: var(--muted);
+}
+
+.text-link {
+	display: inline-block;
+	margin-top: 8px;
+	color: var(--sage-dark);
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 5px;
+}
+
+.text-link span,
+.contact-email span,
+.social-links span {
+	margin-left: 5px;
+}
+
+/* The list can grow naturally as you add tools to your toolkit. */
+.skills {
+	padding-top: 26px;
+}
+
+.section-heading {
+	display: flex;
+	align-items: end;
+	justify-content: space-between;
+	gap: 36px;
+	margin-bottom: 30px;
+}
+
+.section-heading h2 {
+	margin-bottom: 0;
+}
+
+.section-heading > p {
+	max-width: 310px;
+	margin-bottom: 4px;
+}
+
+.skill-list {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.skill-list li {
+	flex: 1 1 30%;
+	min-width: 210px;
+	padding: 20px 12px 20px 0;
+	border-top: 1px solid var(--line);
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 20px;
+}
+
+.skill-list li span {
+	margin-right: 14px;
+	color: var(--sage-dark);
+	font-family: "Trebuchet MS", Arial, sans-serif;
+	font-size: 11px;
+}
+
+/* Flex wrapping makes the project cards fit both wide and narrow screens. */
+.projects {
+	background: #f0f4ed;
+}
+
+.project-heading {
+	margin-bottom: 34px;
+}
+
+.project-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24px;
+}
+
+.project-card {
+	flex: 1 1 280px;
+	overflow: hidden;
+	border: 1px solid var(--line);
+	background: var(--white);
+}
+
+.project-card > img {
+	width: 100%;
+	height: 215px;
+	object-fit: cover;
+}
+
+.project-info {
+	padding: 22px 22px 24px;
+}
+
+.project-status {
+	margin-bottom: 10px;
+	color: var(--sage-dark);
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.project-info h3 {
+	margin-bottom: 9px;
+	font-size: 24px;
+}
+
+.project-info > p:not(.project-status) {
+	min-height: 54px;
+	margin-bottom: 10px;
+	color: var(--muted);
+	font-size: 14px;
+}
+
+/* A soft green contact band gives the page a clear closing section. */
+.contact {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 40px;
+	max-width: none;
+	padding-right: max(6%, calc((100% - 1056px) / 2));
+	padding-left: max(6%, calc((100% - 1056px) / 2));
+	background: var(--sage);
+}
+
+.contact h2 {
+	max-width: 540px;
+}
+
+.contact > div > p:not(.eyebrow) {
+	margin-bottom: 0;
+}
+
+.contact-links {
+	flex: 0 0 auto;
+}
+
+.contact-email {
+	color: var(--ink);
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 20px;
+	text-decoration: none;
+}
+
+.contact-phone {
+	display: block;
+	margin-top: 8px;
+	color: var(--sage-dark);
+	font-size: 14px;
+}
+
+.social-links a {
+	color: var(--sage-dark);
+	font-size: 13px;
+}
+
+.site-footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	padding: 24px max(6%, calc((100% - 1120px) / 2));
+	background: var(--paper);
+}
+
+.site-footer p {
+	margin: 0;
+	color: var(--muted);
+	font-size: 12px;
+}
+
+.site-footer .image-credit {
+	flex-basis: 100%;
+}
+
+.site-footer div {
+	gap: 20px;
+}
+
+/* Stack columns and navigation links on smaller screens. */
+@media (max-width: 700px) {
+	.site-header {
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 10px;
+		padding: 18px 22px;
+	}
+
+	.site-header nav {
+		gap: 10px 20px;
+	}
+
+	.hero {
+		min-height: 500px;
+		padding: 64px 24px;
+		background-position: 58% center;
+	}
+
+	.hero h1 {
+		font-size: 40px;
+	}
+
+	.hero-note {
+		right: 24px;
+	}
+
+	.section-wrap {
+		padding: 64px 24px;
+	}
+
+	.about {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 32px;
+	}
+
+	.about-photo {
+		flex-basis: auto;
+	}
+
+	.about-photo img {
+		height: 360px;
+	}
+
+	.about-copy {
+		flex-basis: auto;
+	}
+
+	.about-copy h2,
+	.section-heading h2,
+	.contact h2 {
+		font-size: 31px;
+	}
+
+	.skills {
+		padding-top: 0;
+	}
+
+	.section-heading {
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	.skill-list li {
+		flex-basis: 45%;
+		min-width: 145px;
+		font-size: 18px;
+	}
+
+	.project-card {
+		flex-basis: 100%;
+	}
+
+	.project-info > p:not(.project-status) {
+		min-height: 0;
+	}
+
+	.contact {
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 24px;
+		padding-right: 24px;
+		padding-left: 24px;
+	}
+
+	.site-footer {
+		align-items: flex-start;
+		flex-direction: column;
+		padding: 24px;
+	}
+}
